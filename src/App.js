@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import picture from './Capture.PNG';
 import './App.css';
 
 function App() {
@@ -95,7 +96,7 @@ function App() {
 
             <div className="relative bg-white rounded-[50px] overflow-hidden border border-purple-100 shadow-2xl max-w-lg">
               <img
-                src="/Capture.PNG"
+                src={picture}
                 alt="Rimsha Noreen"
                 className="w-full h-full object-cover"
               />

@@ -1,7 +1,7 @@
 {
   "name": "phd-portfolio",
   "version": "0.1.0",
-  "homepage": "https://rimsha-noreen.github.io/phd-portfolio",
+  "homepage": "https://rimsha-noreen.github.io/portfolio",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
