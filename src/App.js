@@ -251,23 +251,65 @@ function App() {
         </div>
       </section>
       {/* CTA */}
-      <section className="max-w-7xl mx-auto px-6 pb-20">
-        <div className="rounded-[40px] bg-gradient-to-r from-purple-600 to-indigo-500 text-white p-14 shadow-2xl text-center">
-          <h2 className="text-5xl font-black leading-tight">
-            Looking for a Fully Funded PhD Opportunity in France
-          </h2>
-          <p className="mt-6 text-lg text-purple-100 max-w-3xl mx-auto leading-relaxed">
-            I am actively seeking PhD positions in Applied Mathematics, Artificial Intelligence,
-            Graph Neural Networks, and interdisciplinary computational research.
-          </p>
-          <a
-            href="mailto:ms.rimsha.noreen@gmail.com"
-            className="mt-10 inline-flex items-center justify-center rounded-2xl bg-white text-purple-700 px-8 py-4 font-bold shadow-lg hover:scale-105 transition"
-          >
-            Let's Collaborate
-          </a>
-        </div>
-      </section>
+{/* CTA + Contact Upgrade */}
+<section className="max-w-7xl mx-auto px-6 pb-20">
+  <div className="rounded-[40px] bg-gradient-to-r from-purple-600 to-indigo-500 text-white p-14 shadow-2xl text-center">
+
+    <h2 className="text-5xl font-black leading-tight">
+      Looking for a Fully Funded PhD Opportunity in France
+    </h2>
+
+    <p className="mt-6 text-lg text-purple-100 max-w-3xl mx-auto leading-relaxed">
+      I am actively seeking PhD positions in Applied Mathematics, Artificial Intelligence,
+      Graph Neural Networks, and interdisciplinary computational research.
+    </p>
+
+    {/* Buttons */}
+    <div className="mt-10 flex flex-col md:flex-row gap-4 justify-center items-center">
+
+      {/* Email App */}
+      <a
+        href="mailto:ms.rimsha.noreen@gmail.com?subject=PhD Collaboration&body=Hello, I would like to discuss a PhD opportunity."
+        className="bg-white text-purple-700 px-8 py-4 rounded-2xl font-bold shadow-lg hover:scale-105 transition"
+      >
+        Open Email App
+      </a>
+
+      {/* Gmail Web */}
+      <a
+        href="https://mail.google.com/mail/?view=cm&fs=1&to=ms.rimsha.noreen@gmail.com"
+        target="_blank"
+        rel="noreferrer"
+        className="bg-red-500 text-white px-8 py-4 rounded-2xl font-bold shadow-lg hover:scale-105 transition"
+      >
+        Open Gmail
+      </a>
+
+      {/* Copy Email */}
+      <button
+        onClick={() => {
+          navigator.clipboard.writeText("ms.rimsha.noreen@gmail.com");
+          alert("Email copied!");
+        }}
+        className="bg-white/20 text-white px-8 py-4 rounded-2xl font-bold hover:bg-white/30 transition"
+      >
+        Copy Email
+      </button>
+
+    </div>
+
+    {/* WhatsApp optional */}
+    <a
+      href="https://wa.me/33605863290"
+      target="_blank"
+      rel="noreferrer"
+      className="mt-6 inline-block text-white underline text-sm"
+    >
+      Or contact via WhatsApp
+    </a>
+
+  </div>
+</section>
       {/* Footer */}
       <footer id="contact" className="bg-slate-950 text-white py-14">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
