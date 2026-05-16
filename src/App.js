@@ -1,12 +1,10 @@
 import logo from './logo.svg';
-import picture from './Capture.PNG';
 import './App.css';
-
+import pic from './assets/profile.JPG';
 function App() {
   return (
 
     <div className="min-h-screen bg-[#f7f5ff] text-slate-900 font-sans">
-      {/* Navbar */}
       <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-purple-100 shadow-sm">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -18,7 +16,6 @@ function App() {
               <p className="text-sm text-slate-500">Mathematician • Data Science • Machine Learning Researcher</p>
             </div>
           </div>
-
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
             <a href="#home" className="text-purple-600">Home</a>
             <a href="#about" className="hover:text-purple-600 transition">About</a>
@@ -27,7 +24,6 @@ function App() {
             <a href="#skills" className="hover:text-purple-600 transition">Skills</a>
             <a href="#contact" className="hover:text-purple-600 transition">Contact</a>
           </nav>
-
           <button className="rounded-2xl bg-gradient-to-r from-purple-600 to-indigo-500 text-white px-6 py-3 font-semibold shadow-lg hover:scale-105 transition">
             Download CV
           </button>
@@ -96,7 +92,7 @@ function App() {
 
             <div className="relative bg-white rounded-[50px] overflow-hidden border border-purple-100 shadow-2xl max-w-lg">
               <img
-                src={picture}
+                src={pic}
                 alt="Rimsha Noreen"
                 className="w-full h-full object-cover"
               />
@@ -254,19 +250,16 @@ function App() {
           </div>
         </div>
       </section>
-
       {/* CTA */}
       <section className="max-w-7xl mx-auto px-6 pb-20">
         <div className="rounded-[40px] bg-gradient-to-r from-purple-600 to-indigo-500 text-white p-14 shadow-2xl text-center">
           <h2 className="text-5xl font-black leading-tight">
             Looking for a Fully Funded PhD Opportunity in France
           </h2>
-
           <p className="mt-6 text-lg text-purple-100 max-w-3xl mx-auto leading-relaxed">
             I am actively seeking PhD positions in Applied Mathematics, Artificial Intelligence,
             Graph Neural Networks, and interdisciplinary computational research.
           </p>
-
           <a
             href="mailto:ms.rimsha.noreen@gmail.com"
             className="mt-10 inline-flex items-center justify-center rounded-2xl bg-white text-purple-700 px-8 py-4 font-bold shadow-lg hover:scale-105 transition"
@@ -275,7 +268,6 @@ function App() {
           </a>
         </div>
       </section>
-
       {/* Footer */}
       <footer id="contact" className="bg-slate-950 text-white py-14">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
