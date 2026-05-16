@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import pic from './assets/profile.JPG';
+import cv from './assets/cv.pdf';
 function App() {
   return (
 
@@ -24,7 +25,12 @@ function App() {
             <a href="#skills" className="hover:text-purple-600 transition">Skills</a>
             <a href="#contact" className="hover:text-purple-600 transition">Contact</a>
           </nav>
-          <button className="rounded-2xl bg-gradient-to-r from-purple-600 to-indigo-500 text-white px-6 py-3 font-semibold shadow-lg hover:scale-105 transition">
+          <button className="rounded-2xl bg-gradient-to-r from-purple-600 to-indigo-500 text-white px-6 py-3 font-semibold shadow-lg hover:scale-105 transition"  onClick={() => {
+    const link = document.createElement("a");
+    link.href = cv;
+    link.download = "Rimsha_Noreen_CV.pdf";
+    link.click();
+  }}>
             Download CV
           </button>
         </div>
@@ -141,115 +147,202 @@ function App() {
         </div>
       </section>
 
-      {/* Research & Education */}
-      <section id="research" className="max-w-7xl mx-auto px-6 py-10">
-        <div className="grid lg:grid-cols-2 gap-10">
-          <div className="bg-white rounded-[32px] shadow-lg border border-purple-100 p-10">
-            <h2 className="text-3xl font-bold mb-8">Research Experience</h2>
+{/* Research & Education */}
+<section id="research" className="max-w-7xl mx-auto px-6 py-10">
+  <div className="grid lg:grid-cols-2 gap-10">
 
-            <div className="rounded-3xl bg-gradient-to-r from-purple-50 to-indigo-50 border border-purple-100 p-8">
-              <h3 className="text-2xl font-bold leading-snug">
-                Exploiting GNNs for Detecting Cyber-Attacks in Smart Grid
-              </h3>
+    {/* ================= RESEARCH ================= */}
+    <div className="bg-white rounded-[32px] shadow-lg border border-purple-100 p-10">
+      <h2 className="text-3xl font-bold mb-8">Research Experience</h2>
 
-              <ul className="mt-6 space-y-3 text-slate-600 leading-relaxed">
-                <li>• Developing GNN-based models for False Data Injection detection</li>
-                <li>• Leveraging graph topology and temporal data</li>
-                <li>• Designing robust ML frameworks for anomaly detection</li>
-                <li>• Working with IEEE benchmark datasets</li>
-              </ul>
-            </div>
-          </div>
+      {/* Scrollable Research Container */}
+      <div className="space-y-6 max-h-[450px] overflow-y-auto pr-2">
 
-          <div className="bg-white rounded-[32px] shadow-lg border border-purple-100 p-10">
-            <h2 className="text-3xl font-bold mb-8">Education</h2>
-
-            <div className="space-y-8">
-              <div className="border-l-4 border-purple-500 pl-6">
-                <h3 className="text-xl font-bold">M2 Mathematics & Computer Science</h3>
-                <p className="text-slate-500 mt-2">Université Gustave Eiffel, France</p>
-                <p className="text-purple-600 font-medium mt-2">2025 – Ongoing • Bézout Scholar</p>
-              </div>
-
-              <div className="border-l-4 border-purple-500 pl-6">
-                <h3 className="text-xl font-bold">MS Mathematics</h3>
-                <p className="text-slate-500 mt-2">COMSATS University Islamabad</p>
-                <p className="text-purple-600 font-medium mt-2">CGPA: 4.0 / 4.0</p>
-              </div>
-
-              <div className="border-l-4 border-purple-500 pl-6">
-                <h3 className="text-xl font-bold">BS Mathematics</h3>
-                <p className="text-slate-500 mt-2">COMSATS University Islamabad</p>
-                <p className="text-purple-600 font-medium mt-2">4th Rank in Batch</p>
-              </div>
-            </div>
-          </div>
+        {/* Research 1 */}
+        <div className="rounded-3xl bg-gradient-to-r from-purple-50 to-indigo-50 border border-purple-100 p-8 hover:shadow-md transition">
+          <h3 className="text-2xl font-bold leading-snug">
+            Exploiting GNNs for Detecting Cyber-Attacks in Smart Grid
+          </h3>
+          <ul className="mt-6 space-y-3 text-slate-600 leading-relaxed">
+            <li>• Developing Graph Neural Network (GNN)-based models for detecting False Data Injection (FDI) attacks in smart grid systems.</li>
+            <li>• Leveraging graph topology and temporal data to identify stealthy cyber-physical attacks.</li>
+            <li>• Designing robust and adaptive machine learning frameworks for real-time anomaly detection.</li>
+            <li>• Working with IEEE benchmark datasets and simulation environments for model validation.</li>
+            <li>• Investigating model generalization,scalability, and interpretability in graph-based intrusion detection systems.</li>
+            <li>• Supervisors: Prof. E. V. Belmega (UGE-ESIEE Paris) and Prof. S. Lakshminarayana (University of Warwick, UK)</li>
+          </ul>
         </div>
-      </section>
+
+        {/* Research 2 */}
+        <div className="rounded-3xl bg-gradient-to-r from-indigo-50 to-purple-50 border border-purple-100 p-8 hover:shadow-md transition">
+          <h3 className="text-2xl font-bold leading-snug">
+            Analyzing Topological Indices forPhenylacetone Monooxygenase Network Using Curve Fitting Model
+          </h3>
+          <ul className="mt-6 space-y-3 text-slate-600 leading-relaxed">
+            <li>• Conducted research in graph theory focused on thecomputation of topological indicesforthePAMO(Phenylacetone Monooxygenase) network.</li>
+            <li>• Developed both manual and Python-based methodsfor efficient computation and data analysis of topological indices.</li>
+            <li>• Applied curve fittingmodelsto identify structural patterns and relationships within the network data.</li>
+            <li>• Integrated computational techniques with mathematical modeling for network analysis.</li>
+            <li>• Demonstrated proficiency in graph theory, network analysis, and Python programming.</li>
+          </ul>
+        </div>
+
+        {/* Research 3 */}
+        <div className="rounded-3xl bg-gradient-to-r from-purple-50 to-indigo-50 border border-purple-100 p-8 hover:shadow-md transition">
+          <h3 className="text-2xl font-bold leading-snug">
+            Zero Forcing Number forBiswapped Networks
+          </h3>
+          <ul className="mt-6 space-y-3 text-slate-600 leading-relaxed">
+            <li>• Investigated thezero forcing number for biswapped networks(BSN), including path, cycle, and complete graph structures.</li>
+            <li>• Appliedadvanced graph theory techniquesto analyze network properties and forcing dynamics.</li>
+            <li>• Utilized concepts such as color change rules and forcing sequencesfor modeling complex graph structures.</li>
+            <li>• Demonstrated strong skillsinmathematicalmodeling, graph theory, and network analysis.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    {/* ================= EDUCATION ================= */}
+    <div className="bg-white rounded-[32px] shadow-lg border border-purple-100 p-10">
+      <h2 className="text-3xl font-bold mb-8">Education</h2>
+
+      <div className="space-y-8">
+
+        {/* Education 1 */}
+        <div className="border-l-4 border-purple-500 pl-6">
+          <h3 className="text-xl font-bold">
+            M2 Mathematics & Computer Science
+          </h3>
+          <p className="text-slate-500 mt-2">
+            Université Gustave Eiffel, France
+          </p>
+          <p className="text-purple-600 font-medium mt-2">
+            2025 – Ongoing • Bézout Scholar
+          </p>
+        </div>
+
+        {/* Education 2 */}
+        <div className="border-l-4 border-purple-500 pl-6">
+          <h3 className="text-xl font-bold">MS Mathematics</h3>
+          <p className="text-slate-500 mt-2">
+            COMSATS University Islamabad
+          </p>
+          <p className="text-purple-600 font-medium mt-2">
+            CGPA: 4.0 / 4.0
+          </p>
+        </div>
+
+        {/* Education 3 */}
+        <div className="border-l-4 border-purple-500 pl-6">
+          <h3 className="text-xl font-bold">BS Mathematics</h3>
+          <p className="text-slate-500 mt-2">
+            COMSATS University Islamabad
+          </p>
+          <p className="text-purple-600 font-medium mt-2">
+            CGPA: 3.5 / 4.0 <b>4th Rank in Batch</b>
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
 
       {/* Publications & Skills */}
-      <section id="publications" className="max-w-7xl mx-auto px-6 py-20">
-        <div className="grid lg:grid-cols-3 gap-8">
-          <div className="bg-white rounded-[32px] shadow-lg border border-purple-100 p-8">
-            <h2 className="text-3xl font-bold mb-6">Publications</h2>
+<section id="publications" className="max-w-7xl mx-auto px-6 py-20">
+  <div className="grid lg:grid-cols-3 gap-8 items-stretch">
 
-            <div className="rounded-2xl bg-purple-50 border border-purple-100 p-5">
-              <h3 className="font-bold leading-relaxed">
-                Exploring Topological Indices and Entropy Measures using Python Coding
-              </h3>
+    {/* ================= PUBLICATIONS (SCROLLABLE) ================= */}
+    <div className="bg-white rounded-[32px] shadow-lg border border-purple-100 p-8 h-[500px] flex flex-col">
+      <h2 className="text-3xl font-bold mb-6">Publications</h2>
 
-              <p className="text-slate-500 text-sm mt-3">
-                Journal of Molecular Graphics and Modelling, 2025
-              </p>
-            </div>
+      {/* Scroll Area */}
+      <div className="rounded-2xl bg-purple-50 border border-purple-100 p-5 overflow-y-auto flex-1">
+        <h3 className="font-bold leading-relaxed text-lg">
+          Exploring Topological Indices and Entropy Measures of Phenylacetone Monooxygenase by Using Python Coding
+        </h3>
+
+        <ul className="mt-6 space-y-3 text-slate-600 leading-relaxed">
+          <li className="text-slate-500 text-sm">
+            • <b>Authors:</b> Rashad Ismail, Rimsha Noreen, Muhammad Farhan Hanif, Muhammad Faisal Hanif, Muhammad Kamran Siddiqui.
+          </li>
+
+          <li className="text-slate-500 text-sm">
+            • <b>Journal:</b> Journal of Molecular Graphics and Modelling, 137, 108981, 2025.
+          </li>
+
+          <li className="text-slate-500 text-sm">
+            • <b>Funding:</b> Supported by King Khalid University, Grant No. RGP2/245/45.
+          </li>
+
+          <li className="text-slate-500 text-sm">
+            • <b>Abstract:</b> In this study, I computed topological indices and entropy measures of the Phenylacetone Monooxygenase (PAMO) network using Python programming. The research involved developing computational techniques to analyze structural and informational properties of the network.
+          </li>
+
+          <li className="text-slate-500 text-sm">
+            <b>DOI:</b>{" "}
+            <a
+              href="https://doi.org/10.1016/j.jmgm.2025.108981"
+              target="_blank"
+              className="text-blue-600 underline break-all"
+            >
+              https://doi.org/10.1016/j.jmgm.2025.108981
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    {/* ================= SKILLS ================= */}
+    <div className="bg-white rounded-[32px] shadow-lg border border-purple-100 p-8 h-[500px] flex flex-col">
+      <h2 className="text-3xl font-bold mb-6">Technical Skills</h2>
+
+      <div className="grid grid-cols-2 gap-4">
+        {[
+          "Python",
+          "C / C++",
+          "MATLAB",
+          "LaTeX",
+          "Graph Theory",
+          "Machine Learning",
+          "Data Analysis",
+          "Network Analysis",
+        ].map((skill) => (
+          <div
+            key={skill}
+            className="rounded-2xl bg-purple-50 border border-purple-100 px-4 py-4 text-center font-medium hover:scale-105 transition"
+          >
+            {skill}
           </div>
+        ))}
+      </div>
+    </div>
 
-          <div id="skills" className="bg-white rounded-[32px] shadow-lg border border-purple-100 p-8">
-            <h2 className="text-3xl font-bold mb-6">Technical Skills</h2>
+    {/* ================= ACHIEVEMENTS ================= */}
+    <div className="bg-white rounded-[32px] shadow-lg border border-purple-100 p-8 h-[500px] flex flex-col">
+      <h2 className="text-3xl font-bold mb-6">Achievements</h2>
 
-            <div className="grid grid-cols-2 gap-4">
-              {[
-                'Python',
-                'C / C++',
-                'MATLAB',
-                'LaTeX',
-                'Graph Theory',
-                'Machine Learning',
-                'Data Analysis',
-                'Network Analysis'
-              ].map((skill) => (
-                <div
-                  key={skill}
-                  className="rounded-2xl bg-purple-50 border border-purple-100 px-4 py-4 text-center font-medium"
-                >
-                  {skill}
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="bg-white rounded-[32px] shadow-lg border border-purple-100 p-8">
-            <h2 className="text-3xl font-bold mb-6">Achievements</h2>
-
-            <div className="space-y-5 text-slate-600">
-              <div>
-                <h3 className="font-bold">Certificate of Appreciation</h3>
-                <p className="text-sm mt-1">COMSATS University Lahore</p>
-              </div>
-
-              <div>
-                <h3 className="font-bold">Python & AI Course Completion</h3>
-                <p className="text-sm mt-1">Microsoft Learn Student Ambassadors</p>
-              </div>
-
-              <div>
-                <h3 className="font-bold">Graph Database Webinar</h3>
-                <p className="text-sm mt-1">Research & Data Science Seminar</p>
-              </div>
-            </div>
-          </div>
+      <div className="space-y-6 text-slate-600">
+        <div className="p-4 rounded-2xl bg-purple-50 border border-purple-100">
+          <h3 className="font-bold text-slate-800">Certificate of Appreciation</h3>
+          <p className="text-sm mt-1">COMSATS University Lahore</p>
         </div>
-      </section>
+
+        <div className="p-4 rounded-2xl bg-purple-50 border border-purple-100">
+          <h3 className="font-bold text-slate-800">Python & AI Course Completion</h3>
+          <p className="text-sm mt-1">Microsoft Learn Student Ambassadors</p>
+        </div>
+
+        <div className="p-4 rounded-2xl bg-purple-50 border border-purple-100">
+          <h3 className="font-bold text-slate-800">Graph Database Webinar</h3>
+          <p className="text-sm mt-1">Research & Data Science Seminar</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
       {/* CTA */}
 {/* CTA + Contact Upgrade */}
 <section className="max-w-7xl mx-auto px-6 pb-20">
